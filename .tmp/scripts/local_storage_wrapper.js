@@ -4,11 +4,11 @@
   LocalStorageWrapper = (function() {
     function LocalStorageWrapper() {}
 
-    LocalStorageWrapper.prototype.store = function(key, data) {
+    LocalStorageWrapper.store = function(key, data) {
       return window.localStorage.setItem(key, JSON.stringify(data));
     };
 
-    LocalStorageWrapper.prototype.get = function(key) {
+    LocalStorageWrapper.get = function(key) {
       return JSON.parse(window.localStorage.getItem(key));
     };
 
